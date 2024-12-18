@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Button-Style Navbar</title>
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -22,17 +22,17 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #333;
+      background-color: #c6d7dd;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
       z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 10px rgba(232, 232, 232, 0.2);
     }
 
     .navbar .logo {
-      color: #fff;
+      color: #650000;
       font-size: 26px;
       font-weight: bold;
       letter-spacing: 2px;
@@ -41,9 +41,8 @@
     }
 
     .navbar .logo:hover {
-      color: #f39c12;
+      color: #151413;
     }
-
 
     .navbar .nav-links {
       list-style: none;
@@ -59,42 +58,37 @@
       display: inline-block;
       padding: 10px 20px;
       background-color: transparent;
-      color: #fff;
-      font-size: 16px;
+      color: #090606;
+      font-size: 12px;
       font-weight: 600;
       text-transform: uppercase;
       text-decoration: none;
-      border: 2px solid #fff;
+      border: 2px solid #000000;
       border-radius: 4px;
       transition: all 0.3s ease;
     }
 
     .navbar .nav-links li a:hover {
-      background-color: #f39c12;
+      background-color: #b9cde0;
       color: #333;
-      border-color: #f39c12;
+      border-color: #320e0a;
       transform: scale(1.1);
     }
 
-    
     .hamburger {
       display: none;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 25px;
       cursor: pointer;
     }
 
-    .hamburger .bar {
-      background-color: #fff;
-      height: 4px;
-      width: 100%;
-      border-radius: 4px;
+    .hamburger img {
+      width: 30px;
+      height: 30px;
       transition: all 0.3s ease;
+      color: #fff;
+
     }
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 600px) {
       .navbar .nav-links {
         position: absolute;
         top: 60px;
@@ -109,20 +103,17 @@
         transition: transform 0.3s ease;
       }
 
-      .navbar .nav-links.active {
-        transform: translateX(0);
-      }
-
       .hamburger {
-        display: flex;
+        display: block;
+        margin-right: 20px;
+        margin-left: auto;
+        position: absolute;
+        top: 15px;
+        right: 20px;
       }
 
       .navbar .nav-links li {
         margin-bottom: 20px;
-      }
-
-      .navbar .dropdown {
-        display: none;
       }
 
       .navbar .nav-links li a:hover {
@@ -134,10 +125,23 @@
     }
   </style>
 </head>
+
 <body>
 
   <nav class="navbar">
     <div class="logo">MyBrand</div>
+
+
+    <label for="hamburger-checkbox" class="hamburger">
+      <img src="img\menu-bar.png" alt="Hamburger Menu">
+    </label>
+
+    <label for="hamburger-checkbox" class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -145,15 +149,8 @@
       <li><a href="#">Portfolio</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-
-    <div class="hamburger">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
   </nav>
 
 </body>
+
 </html>
-
-
